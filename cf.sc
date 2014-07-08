@@ -5,7 +5,7 @@ val vol = sc.textFile("hdfs://vbx:8020/user/yury/cfin/stg_site_volume_hr_51K.tsv
 
 val pr2 = pr.map(x => (x.split('\t')(2),x)) // [(String, String)]
 
-val vol2 = vol.map(x => (x.split('\t')(1),x)) // Array[(String, String)]
+val vol2 = vol.map(x => (x.split('\t')(1),x)) // [(String, String)]
 
 val rdd2 = pr2.join(vol2) // Array[(String, (String, String))]
 
