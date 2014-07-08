@@ -3,7 +3,7 @@
 val pr = sc.textFile("hdfs://vbx:8020/user/yury/cfin/fwd_price_hr.tsv") // Array[String]
 val vol = sc.textFile("hdfs://vbx:8020/user/yury/cfin/stg_site_volume_hr_51K.tsv") // Array[String]
 
-val pr2 = pr.map(x => (x.split('\t')(2),x)) // Array[(String, String)]
+val pr2 = pr.map(x => (x.split('\t')(2),x)) // [(String, String)]
 
 val vol2 = vol.map(x => (x.split('\t')(1),x)) // Array[(String, String)]
 
